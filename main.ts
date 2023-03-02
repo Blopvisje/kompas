@@ -8,14 +8,6 @@ basic.forever(function () {
             . # . . .
             . . # . .
             `)
-    } else {
-        basic.showLeds(`
-            . . . . .
-            . . . . .
-            . . # . .
-            . . . . .
-            . . . . .
-            `)
     }
     if (kompasrichting < 225 && kompasrichting > 135) {
         basic.showLeds(`
@@ -32,6 +24,24 @@ basic.forever(function () {
             . . . # .
             # # # # #
             . . . # .
+            . . # . .
+            `)
+    }
+    if (kompasrichting < 0 && kompasrichting > 315) {
+        basic.showLeds(`
+            . . # . .
+            . # # # .
+            # . # . #
+            . . # . .
+            . . # . .
+            `)
+    }
+    if (kompasrichting > 0 && kompasrichting < 45) {
+        basic.showLeds(`
+            . . # . .
+            . # # # .
+            # . # . #
+            . . # . .
             . . # . .
             `)
     }
